@@ -1,3 +1,4 @@
+#library for converting letters into morse code
 char_to_dots = {
   'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
   'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..',
@@ -11,12 +12,19 @@ char_to_dots = {
   '-': '-....-', '+': '.-.-.', '"': '.-..-.', '?': '..--..', '/': '-..-.'
 }
 
-
+#input
 word = "HELLO WORLD"
+
+#Seperate the word into individual characters
 letter_list = list(word)
+
+#make an empty string
 morse_string = ""
+
+#convert every character into morse code
 for each_char in letter_list:
     morse = char_to_dots[each_char]
     morse_string = morse_string + morse
 
+#print the morse code
 print(morse_string)
